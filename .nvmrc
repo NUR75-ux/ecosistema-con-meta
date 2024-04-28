@@ -1,1 +1,30 @@
-v14.18.0
+v14.18.
+
+### Ollama Run with: (/?) for help
+PS C:\Users\Nuria\ecosistema-con-meta> ollama run gemma:latest
+
+### Ollama status
+GET http://localhost:11434/
+
+### List all installed models
+GET http://localhost:11434/api/tags
+
+### Download a model "producci?n"
+POST http://localhost:11434/api/pull
+{
+    "model": "gemma:latest"
+}
+
+###Chat with a model
+POST http://localhost:11434/api/generate
+
+{
+     "model": "gemma:latest" ,
+     "prompt": "Qué es U+&TV""? (en menos de 15 caracter)" ,
+     "stream": false
+}
+
+### Chat with a model in streaming
+
+POST http://localhost:11434/api/generate
+
